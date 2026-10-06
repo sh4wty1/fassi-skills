@@ -84,6 +84,10 @@ Then push, and update the installed copy as shown in [Install](#install).
 
 They live in this repo as real folders, `skills/<name>/SKILL.md`, and are installed the same way as `setup-fassi-skills`.
 
+| Skill | What it does |
+| --- | --- |
+| `help-me` | `/help-me I need to do X`: recommends the skills and development patterns to use for that task, in order |
+
 ## License
 
 [MIT](LICENSE) for what is written here. Third-party skills keep the licenses of their sources.
