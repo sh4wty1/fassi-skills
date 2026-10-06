@@ -1,0 +1,91 @@
+{
+  "sources": {
+    "mattpocock": {
+      "repo": "https://github.com/mattpocock/skills",
+      "license": "MIT",
+      "install": "npx --yes skills@latest add mattpocock/skills --skill {skill} -a {agents} -y"
+    },
+    "tech-leads-club": {
+      "repo": "https://github.com/tech-leads-club/agent-skills",
+      "license": "MIT (CLI), CC-BY-4.0 (skill content)",
+      "install": "npx --yes @tech-leads-club/agent-skills install -s {skill} -a {agents}"
+    }
+  },
+  "any_repo_install": "npx --yes skills@latest add {repo} --skill {skill} -a {agents} -y",
+  "skills": [
+    {
+      "name": "grill-with-docs",
+      "source": "mattpocock",
+      "category": "planning",
+      "when_to_use": "Interview about the spec, close open questions and record decisions."
+    },
+    {
+      "name": "to-spec",
+      "source": "mattpocock",
+      "category": "planning",
+      "when_to_use": "Turn the result of a grilling session into a refined spec."
+    },
+    {
+      "name": "to-tickets",
+      "source": "mattpocock",
+      "category": "planning",
+      "when_to_use": "Break a spec into tickets, phase by phase."
+    },
+    {
+      "name": "implement",
+      "source": "mattpocock",
+      "category": "planning",
+      "when_to_use": "Implement one ticket per session."
+    },
+    {
+      "name": "tlc-spec-driven",
+      "source": "tech-leads-club",
+      "category": "features",
+      "when_to_use": "A feature where what to build is still open, or that spans several modules."
+    },
+    {
+      "name": "tlc-spec-lean",
+      "source": "tech-leads-club",
+      "category": "features",
+      "when_to_use": "A feature small enough for one plan: one module, behaviour already clear."
+    },
+    {
+      "name": "tlc-implement",
+      "source": "tech-leads-club",
+      "category": "features",
+      "when_to_use": "Work already planned: a spec, ticket or checklist exists and only the build is left."
+    },
+    {
+      "name": "the-judge",
+      "source": "tech-leads-club",
+      "category": "quality",
+      "when_to_use": "A pull request to review, posted to GitHub. Needs an authenticated gh CLI."
+    },
+    {
+      "name": "harness-eval",
+      "source": "tech-leads-club",
+      "category": "quality",
+      "when_to_use": "AGENTS.md, rules or the skills themselves need an audit."
+    }
+  ],
+  "workflows": [
+    {
+      "name": "matt-pocock",
+      "when_to_use": "Start from a conversation: grill the idea, write the spec, cut tickets, build one ticket per session.",
+      "skills": ["grill-with-docs", "to-spec", "to-tickets", "implement"]
+    },
+    {
+      "name": "tlc",
+      "when_to_use": "Spec-driven features with an independent verifier. Pick tlc-spec-driven when the work needs a task breakdown to stay ordered, tlc-spec-lean otherwise.",
+      "skills": ["tlc-spec-driven", "tlc-spec-lean", "tlc-implement"]
+    }
+  ],
+  "workflow_rule": "One feature stays in one workflow from spec to verification. Quality skills pair with either workflow.",
+  "tools": [
+    {
+      "name": "harness-score",
+      "run": "npx harness-score",
+      "when_to_use": "Measure the maturity of the repo's agent harness (L0-L4): at project start and at each milestone."
+    }
+  ]
+}

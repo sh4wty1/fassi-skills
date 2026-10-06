@@ -1,0 +1,12 @@
+{
+  "name": "fassi-skills",
+  "description": "Fassi's curated agent skills.",
+  "owner": { "name": "sh4wty1" },
+  "plugins": [
+    {
+      "name": "fassi-skills",
+      "source": "./",
+      "description": "My curated registry of agent skills and the command that installs them into any project."
+    }
+  ]
+}
