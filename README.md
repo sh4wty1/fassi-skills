@@ -15,7 +15,7 @@ Once per machine. Needs Node.js. Pick one channel: with both, the machine holds 
 /plugin install fassi-skills@fassi-skills
 ```
 
-The plugin brings every skill in this repo, as `/fassi-skills:setup-fassi-skills` and `/fassi-skills:help-me`. Update with `/plugin marketplace update fassi-skills`.
+The plugin brings every skill in this repo, each as `/fassi-skills:<name>`: `setup-fassi-skills`, `help-me` and `write-commit`. Update with `/plugin marketplace update fassi-skills`.
 
 ### Other agents, with npx
 
@@ -82,11 +82,12 @@ Then push, and update the installed copy as shown in [Install](#install).
 
 ## Skills written by me
 
-They live in this repo as real folders, `skills/<name>/SKILL.md`, and are installed the same way as `setup-fassi-skills`.
+They live in this repo as real folders, `skills/<name>/SKILL.md`. The plugin brings all of them. With npx, `help-me` comes with the install command and the others are in the registry, under the `fassi` source.
 
 | Skill | What it does |
 | --- | --- |
 | `help-me` | `/help-me I need to do X`: recommends the skills and development patterns to use for that task, in order |
+| `write-commit` | Writes the commit message in the convention the repo already uses (Conventional Commits when it has none) and commits the staged changes once you approve. Inspired by [iuricode/padroes-de-commits](https://github.com/iuricode/padroes-de-commits) |
 
 ## License
 

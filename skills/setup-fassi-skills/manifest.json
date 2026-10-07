@@ -29,6 +29,11 @@
       "repo": "https://github.com/pbakaus/impeccable",
       "license": "Apache-2.0",
       "install": "npx --yes impeccable install --providers={agents}"
+    },
+    "fassi": {
+      "repo": "https://github.com/sh4wty1/fassi-skills",
+      "license": "MIT",
+      "install": "npx --yes skills@latest add sh4wty1/fassi-skills --skill {skill} -a {agents} -y"
     }
   },
   "any_repo_install": "npx --yes skills@latest add {repo} --skill {skill} -a {agents} -y",
@@ -458,6 +463,12 @@
       "source": "tech-leads-club",
       "category": "tooling",
       "when_to_use": "Watch an Nx Cloud CI pipeline and apply its self-healing fixes."
+    },
+    {
+      "name": "write-commit",
+      "source": "fassi",
+      "category": "tooling",
+      "when_to_use": "Write commit messages in the convention the repo already uses, and commit the staged changes after approval."
     },
     {
       "name": "playwright-skill",
