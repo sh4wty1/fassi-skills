@@ -37,13 +37,13 @@ Open your agent at the root of a project and run:
 
 Installed with npx, that is `/setup-fassi-skills`. In agents without slash commands, ask it to run the `setup-fassi-skills` skill.
 
-It reads the project, recommends the skills that fit it, and asks how to proceed:
+It reads the project, recommends the skills that fit it, and asks how to proceed. Skills that fit only in part are listed apart, as worth knowing, and skills already installed are left out of both lists. When the registry on GitHub has skills the installed copy lacks, it says so and gives the update command.
 
 | Option | What happens |
 | --- | --- |
 | Install recommended | Installs the skills it recommended for this project |
 | Install all | Installs every skill in the registry |
-| Choose myself | Asks which categories to browse, then opens a picker for each, recommendations marked |
+| Choose myself | Asks which categories to browse, then opens a picker for each, with recommended and worth-knowing skills marked |
 | Help me decide | Asks what you are building, then opens the picker with new recommendations |
 
 Skills are installed into the project, for the agent you ran it from; name other agents when it asks and it installs for those too. At the end it lists what was installed and what failed.
