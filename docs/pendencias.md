@@ -24,7 +24,7 @@ npx skills@latest add sh4wty1/fassi-skills --skill setup-fassi-skills -g
 
 **Causa: não confirmada.** Hipóteses, da mais provável para a menos:
 
-1. **Cópia antiga.** `/setup-fassi-skills` abre a cópia global em `~/.claude/skills/`, instalada pelo npx. O `/plugin marketplace update` atualiza só a do plugin (`/fassi-skills:setup-fassi-skills`). Em 2026-10-06 a global ainda tinha o manifest de 9 skills. Conferir: contar as skills em `~/.claude/skills/setup-fassi-skills/manifest.json`.
+1. **Cópia antiga. [CONFIRMADO em 2026-10-06.]** `/setup-fassi-skills` abre a cópia global em `~/.claude/skills/`, instalada pelo npx. O `/plugin marketplace update` atualiza só a do plugin (`/fassi-skills:setup-fassi-skills`). A global ficou presa no manifest de 9 skills mesmo após o `marketplace update`; `npx skills@latest update -g` a levou para 129. **Era essa a causa** — não a regra de recomendação. Resta decidir se o setup deve avisar quando o manifest ao lado dele está atrás do do GitHub.
 2. **Regra conservadora.** A recomendação é "skills cujo `when_to_use` se encaixa no projeto". Neste repo, que não tem código de aplicação, isso deu só `harness-eval` e `skill-architect`, mesmo com o manifest de 96.
 3. **Falta de regra para uma segunda rodada.** O SKILL.md não manda mostrar o que entrou no registry desde a última vez, nem os "quase encaixes" que valeria conhecer.
 
