@@ -6,7 +6,7 @@ Most of the skills are third-party. The registry points at their sources instead
 
 ## Install
 
-Once per machine. Needs Node.js.
+Once per machine. Needs Node.js. Pick one channel: with both, the machine holds two copies that update separately.
 
 ### Claude Code, as a plugin
 
@@ -15,27 +15,27 @@ Once per machine. Needs Node.js.
 /plugin install fassi-skills@fassi-skills
 ```
 
-The command is then `/fassi-skills:setup-fassi-skills`. Update with `/plugin marketplace update fassi-skills`.
+The plugin brings every skill in this repo, as `/fassi-skills:setup-fassi-skills` and `/fassi-skills:help-me`. Update with `/plugin marketplace update fassi-skills`.
 
-### Any agent, with npx
+### Other agents, with npx
 
-Works for Claude Code, Cursor, Codex, Copilot, Windsurf and others.
+For Cursor, Codex, Copilot, Windsurf and others.
 
 ```bash
-npx skills@latest add sh4wty1/fassi-skills --skill setup-fassi-skills -g
+npx skills@latest add sh4wty1/fassi-skills --skill setup-fassi-skills help-me -g
 ```
 
-The installer asks which agents to install it for. Add `-a <agent> -y` to skip the prompt, for example `-a claude-code -y`. The `setup-fassi-skills` skill is then available in every project, as `/setup-fassi-skills`. Update with `npx skills@latest update -g`.
+The installer asks which agents to install them for. Add `-a <agent> -y` to skip the prompt, for example `-a cursor -y`. The two skills are then available in every project, as `/setup-fassi-skills` and `/help-me`. Update with `npx skills@latest update -g`.
 
 ## Use
 
 Open your agent at the root of a project and run:
 
 ```
-/setup-fassi-skills
+/fassi-skills:setup-fassi-skills
 ```
 
-With the plugin, that is `/fassi-skills:setup-fassi-skills`. In agents without slash commands, ask it to run the `setup-fassi-skills` skill.
+Installed with npx, that is `/setup-fassi-skills`. In agents without slash commands, ask it to run the `setup-fassi-skills` skill.
 
 It reads the project, recommends the skills that fit it, and asks how to proceed:
 

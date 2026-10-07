@@ -1,7 +1,6 @@
 {
   "name": "fassi-skills",
   "description": "My curated registry of agent skills and the command that installs them into any project.",
-  "version": "0.1.0",
   "author": { "name": "sh4wty1" },
   "repository": "https://github.com/sh4wty1/fassi-skills",
   "license": "MIT"
