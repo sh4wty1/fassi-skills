@@ -19,7 +19,7 @@ Done when you hold a **recommended** set: the skills whose `when_to_use` fits th
 Show the recommended set with its reasons, then ask one question with these options:
 
 - **Install recommended**: the recommended set. Offer it first, and only when the set is non-empty.
-- **Install all**: every skill in the manifest.
+- **Install all**: every skill in the manifest. Put the count in the option, since each installed skill adds its description to every session.
 - **Choose myself**: go to the picker.
 - **Help me decide**: ask in plain text what they are building, plus at most two follow-ups (new or existing project, feature size, whether PRs are reviewed on GitHub). Rebuild the recommended set from the answers, show it, and go to the picker.
 
@@ -27,11 +27,11 @@ Ask with your structured question tool when you have one (`AskUserQuestion` in C
 
 ## 3. Picker
 
-One multi-select question per manifest category. Each option is a skill: its name as the label, its `when_to_use` as the description. Suffix the label with `(Recommended)` for the recommended set and `(installed)` for skills already present.
+First ask which categories to browse: one multi-select whose options are the manifest categories, each with its skill count, suffixed `(Recommended)` when it holds a recommended skill. Then one multi-select question per chosen category. Each option is a skill: its name as the label, its `when_to_use` as the description. Suffix the label with `(Recommended)` for the recommended set and `(installed)` for skills already present.
 
 `AskUserQuestion` takes 1-4 questions per call and 2-4 options per question, so:
 
-- a category with more than 4 skills splits into `<category> (1/2)`, `(2/2)`;
+- the category list, and a category with more than 4 skills, split into `<category> (1/2)`, `(2/2)`;
 - a category with 1 skill merges into its nearest neighbour;
 - more than 4 questions continue in a second call.
 

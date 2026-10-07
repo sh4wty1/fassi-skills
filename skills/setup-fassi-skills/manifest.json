@@ -66,6 +66,528 @@
       "source": "tech-leads-club",
       "category": "quality",
       "when_to_use": "AGENTS.md, rules or the skills themselves need an audit."
+    },
+    {
+      "name": "tlc-discover",
+      "source": "tech-leads-club",
+      "category": "features",
+      "when_to_use": "An unshaped idea: interview it into a go/no-go verdict and a design document others can plan from."
+    },
+    {
+      "name": "tlc-plan",
+      "source": "tech-leads-club",
+      "category": "features",
+      "when_to_use": "Decided work (PRD, design doc, RFC, thread) to cut into tasks a builder can act on without guessing."
+    },
+    {
+      "name": "domain-analysis",
+      "source": "tech-leads-club",
+      "category": "architecture",
+      "when_to_use": "Find the business domains and bounded contexts in a codebase, and where service boundaries should go (strategic DDD)."
+    },
+    {
+      "name": "tactical-ddd",
+      "source": "tech-leads-club",
+      "category": "architecture",
+      "when_to_use": "Domain models that are just data bags: review or refactor entities, value objects, aggregates and domain events."
+    },
+    {
+      "name": "modular-design-principles",
+      "source": "tech-leads-club",
+      "category": "architecture",
+      "when_to_use": "Design or review module boundaries, contracts and state isolation, in any stack."
+    },
+    {
+      "name": "evolutionary-modular-architecture",
+      "source": "tech-leads-club",
+      "category": "architecture",
+      "when_to_use": "Design a backend or platform as a modular monolith (bounded contexts, anti-corruption layer, outbox, resilience) and get an architecture document with diagrams."
+    },
+    {
+      "name": "coupling-analysis",
+      "source": "tech-leads-club",
+      "category": "architecture",
+      "when_to_use": "Judge whether modules are too coupled (strength, distance, volatility) and which ones to decouple."
+    },
+    {
+      "name": "modular-decomposition",
+      "source": "tech-leads-club",
+      "category": "architecture",
+      "when_to_use": "Break a monolith into modules end to end: runs the component, duplication, hierarchy, coupling and grouping analyses in sequence."
+    },
+    {
+      "name": "component-identification-sizing",
+      "source": "tech-leads-club",
+      "category": "architecture",
+      "when_to_use": "Map the components of a codebase and their size, to decide what to extract first."
+    },
+    {
+      "name": "component-common-domain-detection",
+      "source": "tech-leads-club",
+      "category": "architecture",
+      "when_to_use": "The same business logic lives in several components; find what to consolidate before a refactor."
+    },
+    {
+      "name": "component-flattening-analysis",
+      "source": "tech-leads-club",
+      "category": "architecture",
+      "when_to_use": "Classes sit at the wrong level of the module hierarchy: orphaned or misplaced code."
+    },
+    {
+      "name": "domain-identification-grouping",
+      "source": "tech-leads-club",
+      "category": "architecture",
+      "when_to_use": "Group components that already exist into business domains, to plan a service-based architecture."
+    },
+    {
+      "name": "decomposition-planning-roadmap",
+      "source": "tech-leads-club",
+      "category": "architecture",
+      "when_to_use": "Decide the order to extract services from a monolith and track the progress."
+    },
+    {
+      "name": "legacy-migration-planner",
+      "source": "tech-leads-club",
+      "category": "architecture",
+      "when_to_use": "Plan a legacy migration, rewrite or framework upgrade as incremental steps (strangler fig)."
+    },
+    {
+      "name": "frontend-blueprint",
+      "source": "tech-leads-club",
+      "category": "architecture",
+      "when_to_use": "A frontend that must match a vision: collects references, tokens, typography and layout before generating code."
+    },
+    {
+      "name": "react-composition-patterns",
+      "source": "tech-leads-club",
+      "category": "architecture",
+      "when_to_use": "React components drowning in boolean props, or a component library that needs a flexible API (compound components, context)."
+    },
+    {
+      "name": "codenavi",
+      "source": "tech-leads-club",
+      "category": "development",
+      "when_to_use": "Fix, change or investigate code in a codebase you do not know; keeps findings in a .notebook/ across sessions."
+    },
+    {
+      "name": "coding-guidelines",
+      "source": "tech-leads-club",
+      "category": "development",
+      "when_to_use": "Any coding session: guardrails against common LLM coding mistakes (overreach, assumptions, bloat)."
+    },
+    {
+      "name": "not-your-babysitter",
+      "source": "tech-leads-club",
+      "category": "development",
+      "when_to_use": "Hand off a task to run end to end without check-ins, with every claim verified against evidence."
+    },
+    {
+      "name": "docs-writer",
+      "source": "tech-leads-club",
+      "category": "development",
+      "when_to_use": "Write, review or restructure READMEs, guides and /docs files."
+    },
+    {
+      "name": "spec-driven-eval",
+      "source": "tech-leads-club",
+      "category": "development",
+      "when_to_use": "Grade how completely an implementation fulfils its spec, criterion by criterion. Run it by name."
+    },
+    {
+      "name": "gh-address-comments",
+      "source": "tech-leads-club",
+      "category": "development",
+      "when_to_use": "The open PR of the current branch has review comments to address. Needs an authenticated gh CLI."
+    },
+    {
+      "name": "jira-assistant",
+      "source": "tech-leads-club",
+      "category": "development",
+      "when_to_use": "Search, create, update or transition Jira issues. Needs the Atlassian MCP."
+    },
+    {
+      "name": "confluence-assistant",
+      "source": "tech-leads-club",
+      "category": "development",
+      "when_to_use": "Search, create or update Confluence pages. Needs the Atlassian MCP."
+    },
+    {
+      "name": "nestjs-modular-monolith",
+      "source": "tech-leads-club",
+      "category": "development",
+      "when_to_use": "A NestJS backend built as a modular monolith with DDD, Clean Architecture and CQRS."
+    },
+    {
+      "name": "rails-dev",
+      "source": "tech-leads-club",
+      "category": "development",
+      "when_to_use": "Any task that touches Rails code: opinionated conventions (rich models, concerns, Minitest with fixtures)."
+    },
+    {
+      "name": "react-native-expert",
+      "source": "tech-leads-club",
+      "category": "development",
+      "when_to_use": "A React Native or Expo app: navigation, lists, animations, native modules, platform-specific code."
+    },
+    {
+      "name": "shopify-developer",
+      "source": "tech-leads-club",
+      "category": "development",
+      "when_to_use": "Shopify themes or apps: Liquid, OS 2.0, GraphQL APIs, Hydrogen, Functions."
+    },
+    {
+      "name": "web-quality-audit",
+      "source": "tech-leads-club",
+      "category": "quality",
+      "when_to_use": "Audit a site across performance, accessibility, SEO and best practices in one pass. Start here, then fix each finding with the focused skill for its area."
+    },
+    {
+      "name": "seo",
+      "source": "tech-leads-club",
+      "category": "quality",
+      "when_to_use": "A search-visibility problem: meta tags, structured data, sitemap, crawlability. Also the follow-up to SEO findings from an audit."
+    },
+    {
+      "name": "accessibility",
+      "source": "tech-leads-club",
+      "category": "quality",
+      "when_to_use": "An accessibility problem or WCAG audit: keyboard navigation, screen readers, contrast, ARIA."
+    },
+    {
+      "name": "best-practices",
+      "source": "tech-leads-club",
+      "category": "quality",
+      "when_to_use": "Web security, compatibility and code-quality findings: HTTPS, CSP, deprecated APIs, console errors."
+    },
+    {
+      "name": "tlc-generative-engine-optimization",
+      "source": "tech-leads-club",
+      "category": "quality",
+      "when_to_use": "Make a page or site get cited by AI answer engines (AI Overviews, ChatGPT Search, Perplexity)."
+    },
+    {
+      "name": "react-best-practices",
+      "source": "tech-leads-club",
+      "category": "quality",
+      "when_to_use": "Write, review or refactor React/Next.js code for performance: data fetching, re-renders, bundle size."
+    },
+    {
+      "name": "perf-lighthouse",
+      "source": "tech-leads-club",
+      "category": "performance",
+      "when_to_use": "Measure a site with Lighthouse from the CLI, read the report, set budgets, wire it into CI."
+    },
+    {
+      "name": "core-web-vitals",
+      "source": "tech-leads-club",
+      "category": "performance",
+      "when_to_use": "A bad LCP, INP or CLS score to fix."
+    },
+    {
+      "name": "perf-web-optimization",
+      "source": "tech-leads-club",
+      "category": "performance",
+      "when_to_use": "A slow site in general: bundle size, images, caching, lazy loading."
+    },
+    {
+      "name": "perf-astro",
+      "source": "tech-leads-club",
+      "category": "performance",
+      "when_to_use": "Performance of an Astro site specifically."
+    },
+    {
+      "name": "security-best-practices",
+      "source": "tech-leads-club",
+      "category": "security",
+      "when_to_use": "A security review of Python, JavaScript/TypeScript or Go code, or secure-by-default coding help."
+    },
+    {
+      "name": "security-threat-model",
+      "source": "tech-leads-club",
+      "category": "security",
+      "when_to_use": "Threat model a codebase: trust boundaries, assets, abuse paths and mitigations, written to Markdown."
+    },
+    {
+      "name": "security-ownership-map",
+      "source": "tech-leads-club",
+      "category": "security",
+      "when_to_use": "Who owns the sensitive code, from git history: bus factor, orphaned security-critical files."
+    },
+    {
+      "name": "frontend-design",
+      "source": "tech-leads-club",
+      "category": "design",
+      "when_to_use": "Build a page, component or app that must look distinctive rather than like generic AI output."
+    },
+    {
+      "name": "web-design-guidelines",
+      "source": "tech-leads-club",
+      "category": "design",
+      "when_to_use": "Review existing UI code against web interface guidelines (visual design, interaction)."
+    },
+    {
+      "name": "figma",
+      "source": "tech-leads-club",
+      "category": "design",
+      "when_to_use": "A task that starts from a Figma URL or node: fetch design context, variables and assets. Needs the Figma MCP."
+    },
+    {
+      "name": "figma-implement-design",
+      "source": "tech-leads-club",
+      "category": "design",
+      "when_to_use": "Implement a Figma design as code with 1:1 visual fidelity. Needs the Figma MCP."
+    },
+    {
+      "name": "create-adr",
+      "source": "tech-leads-club",
+      "category": "creation",
+      "when_to_use": "Record an architectural decision and its reasons as an ADR."
+    },
+    {
+      "name": "create-rfc",
+      "source": "tech-leads-club",
+      "category": "creation",
+      "when_to_use": "Propose a significant change and get stakeholders aligned before deciding."
+    },
+    {
+      "name": "technical-design-doc-creator",
+      "source": "tech-leads-club",
+      "category": "creation",
+      "when_to_use": "Write a technical design document before implementing."
+    },
+    {
+      "name": "skill-architect",
+      "source": "tech-leads-club",
+      "category": "creation",
+      "when_to_use": "Create a new skill, or turn a repeated workflow into one."
+    },
+    {
+      "name": "subagent-creator",
+      "source": "tech-leads-club",
+      "category": "creation",
+      "when_to_use": "Create a subagent (verifier, debugger, orchestrator) with its own isolated context."
+    },
+    {
+      "name": "cursor-subagent-creator",
+      "source": "tech-leads-club",
+      "category": "creation",
+      "when_to_use": "Create a subagent for Cursor specifically (.cursor/agents/)."
+    },
+    {
+      "name": "the-fool",
+      "source": "tech-leads-club",
+      "category": "decision-making",
+      "when_to_use": "Stress-test a plan or decision before committing: devil's advocate, pre-mortem, red team. It only critiques."
+    },
+    {
+      "name": "the-jury",
+      "source": "tech-leads-club",
+      "category": "decision-making",
+      "when_to_use": "A decision or tradeoff that needs a verdict: a panel of subagents deliberates and commits to one answer."
+    },
+    {
+      "name": "learning-opportunities",
+      "source": "tech-leads-club",
+      "category": "learning",
+      "when_to_use": "Learn from the code just written: exercises after a feature, refactor or design decision."
+    },
+    {
+      "name": "mermaid-studio",
+      "source": "tech-leads-club",
+      "category": "tooling",
+      "when_to_use": "Create, validate and render Mermaid diagrams (flowchart, sequence, ERD, C4), including from existing code."
+    },
+    {
+      "name": "excalidraw-studio",
+      "source": "tech-leads-club",
+      "category": "tooling",
+      "when_to_use": "Generate an Excalidraw diagram file from a description."
+    },
+    {
+      "name": "chrome-devtools",
+      "source": "tech-leads-club",
+      "category": "tooling",
+      "when_to_use": "Debug a page in the browser: console errors, network requests, screenshots, performance profile. Needs the Chrome DevTools MCP."
+    },
+    {
+      "name": "gh-fix-ci",
+      "source": "tech-leads-club",
+      "category": "tooling",
+      "when_to_use": "Failing GitHub Actions checks on a PR to diagnose and fix. Needs an authenticated gh CLI."
+    },
+    {
+      "name": "nx-workspace",
+      "source": "tech-leads-club",
+      "category": "tooling",
+      "when_to_use": "Set up, explore or optimise an Nx monorepo: boundaries, caching, affected projects."
+    },
+    {
+      "name": "nx-run-tasks",
+      "source": "tech-leads-club",
+      "category": "tooling",
+      "when_to_use": "Run build, test, lint or serve in an Nx workspace (run-many, affected)."
+    },
+    {
+      "name": "nx-generate",
+      "source": "tech-leads-club",
+      "category": "tooling",
+      "when_to_use": "Scaffold projects, libraries or features with Nx generators."
+    },
+    {
+      "name": "nx-ci-monitor",
+      "source": "tech-leads-club",
+      "category": "tooling",
+      "when_to_use": "Watch an Nx Cloud CI pipeline and apply its self-healing fixes."
+    },
+    {
+      "name": "playwright-skill",
+      "source": "tech-leads-club",
+      "category": "web-automation",
+      "when_to_use": "Drive a browser to test a page: flows, forms, screenshots, responsive checks, broken links."
+    },
+    {
+      "name": "sentry",
+      "source": "tech-leads-club",
+      "category": "monitoring",
+      "when_to_use": "Read production errors from Sentry and summarise them. Read-only; needs SENTRY_AUTH_TOKEN."
+    },
+    {
+      "name": "vercel-deploy",
+      "source": "tech-leads-club",
+      "category": "cloud",
+      "when_to_use": "Deploy the project to Vercel, preview or production."
+    },
+    {
+      "name": "netlify-deploy",
+      "source": "tech-leads-club",
+      "category": "cloud",
+      "when_to_use": "Deploy the project to Netlify."
+    },
+    {
+      "name": "cloudflare-deploy",
+      "source": "tech-leads-club",
+      "category": "cloud",
+      "when_to_use": "Deploy to Cloudflare Workers or Pages."
+    },
+    {
+      "name": "render-deploy",
+      "source": "tech-leads-club",
+      "category": "cloud",
+      "when_to_use": "Deploy to Render, with a generated render.yaml."
+    },
+    {
+      "name": "aws-advisor",
+      "source": "tech-leads-club",
+      "category": "cloud",
+      "when_to_use": "AWS architecture, service choice, security review or troubleshooting. Uses the AWS MCP tools."
+    },
+    {
+      "name": "positioning-icp",
+      "source": "tech-leads-club",
+      "category": "gtm",
+      "when_to_use": "Define the ideal customer profile, positioning and messaging of a product."
+    },
+    {
+      "name": "ai-pricing",
+      "source": "tech-leads-club",
+      "category": "gtm",
+      "when_to_use": "Price an AI product: charge metric, tiers, margins."
+    },
+    {
+      "name": "sales-motion-design",
+      "source": "tech-leads-club",
+      "category": "gtm",
+      "when_to_use": "Choose between product-led and sales-led, design the trial or freemium."
+    },
+    {
+      "name": "solo-founder-gtm",
+      "source": "tech-leads-club",
+      "category": "gtm",
+      "when_to_use": "Go-to-market as a solo founder, with AI agents in place of a team."
+    },
+    {
+      "name": "multi-platform-launch",
+      "source": "tech-leads-club",
+      "category": "gtm",
+      "when_to_use": "Plan a product launch: Product Hunt, waitlist, Hacker News, multi-channel."
+    },
+    {
+      "name": "ai-seo",
+      "source": "tech-leads-club",
+      "category": "gtm",
+      "when_to_use": "Grow search traffic with content at scale: programmatic SEO, competitor alternative pages. For fixing a site's technical SEO use seo."
+    },
+    {
+      "name": "content-to-pipeline",
+      "source": "tech-leads-club",
+      "category": "gtm",
+      "when_to_use": "Turn content into revenue: distribution and repurposing across platforms."
+    },
+    {
+      "name": "ai-cold-outreach",
+      "source": "tech-leads-club",
+      "category": "gtm",
+      "when_to_use": "Cold email systems: sequences, deliverability, personalisation at scale."
+    },
+    {
+      "name": "video-outreach",
+      "source": "tech-leads-club",
+      "category": "gtm",
+      "when_to_use": "Personalised video for prospecting."
+    },
+    {
+      "name": "social-selling",
+      "source": "tech-leads-club",
+      "category": "gtm",
+      "when_to_use": "Sell through LinkedIn: profile, DM sequences, content to pipeline."
+    },
+    {
+      "name": "ai-sdr",
+      "source": "tech-leads-club",
+      "category": "gtm",
+      "when_to_use": "Automate sales qualification with AI sales agents."
+    },
+    {
+      "name": "lead-enrichment",
+      "source": "tech-leads-club",
+      "category": "gtm",
+      "when_to_use": "Enrich and score leads against the ICP."
+    },
+    {
+      "name": "paid-creative-ai",
+      "source": "tech-leads-club",
+      "category": "gtm",
+      "when_to_use": "AI-generated ad creative for Meta, Google or TikTok, and how to test it."
+    },
+    {
+      "name": "ai-ugc-ads",
+      "source": "tech-leads-club",
+      "category": "gtm",
+      "when_to_use": "UGC ad campaigns, with creators or AI-generated."
+    },
+    {
+      "name": "partner-affiliate",
+      "source": "tech-leads-club",
+      "category": "gtm",
+      "when_to_use": "Build a partner, affiliate or referral program."
+    },
+    {
+      "name": "expansion-retention",
+      "source": "tech-leads-club",
+      "category": "gtm",
+      "when_to_use": "Reduce churn and grow expansion revenue."
+    },
+    {
+      "name": "gtm-engineering",
+      "source": "tech-leads-club",
+      "category": "gtm",
+      "when_to_use": "Build GTM automation with code and workflow tools (n8n, Make, Clay API)."
+    },
+    {
+      "name": "gtm-metrics",
+      "source": "tech-leads-club",
+      "category": "gtm",
+      "when_to_use": "Define GTM metrics and dashboards: pipeline, CAC, LTV, time-to-first-value."
     }
   ],
   "workflows": [
@@ -76,8 +598,8 @@
     },
     {
       "name": "tlc",
-      "when_to_use": "Spec-driven features with an independent verifier. Pick tlc-spec-driven when the work needs a task breakdown to stay ordered, tlc-spec-lean otherwise.",
-      "skills": ["tlc-spec-driven", "tlc-spec-lean", "tlc-implement"]
+      "when_to_use": "Spec-driven features with an independent verifier. Pick tlc-spec-driven when the work needs a task breakdown to stay ordered, tlc-spec-lean otherwise. For work too big for one spec, go step by step: tlc-discover shapes the idea, tlc-plan cuts it into tasks, tlc-implement builds each one.",
+      "skills": ["tlc-discover", "tlc-plan", "tlc-spec-driven", "tlc-spec-lean", "tlc-implement"]
     }
   ],
   "workflow_rule": "One feature stays in one workflow from spec to verification. Quality skills pair with either workflow.",

@@ -43,7 +43,7 @@ It reads the project, recommends the skills that fit it, and asks how to proceed
 | --- | --- |
 | Install recommended | Installs the skills it recommended for this project |
 | Install all | Installs every skill in the registry |
-| Choose myself | Opens a picker grouped by category, recommendations marked |
+| Choose myself | Asks which categories to browse, then opens a picker for each, recommendations marked |
 | Help me decide | Asks what you are building, then opens the picker with new recommendations |
 
 Skills are installed into the project, for the agent you ran it from; name other agents when it asks and it installs for those too. At the end it lists what was installed and what failed.
@@ -61,7 +61,7 @@ Everything lives in one file: [`skills/setup-fassi-skills/manifest.json`](skills
 | `workflows` | Skills that form a flow, in order, and when to pick that flow |
 | `tools` | CLIs that are run, not installed |
 
-Current sources: [mattpocock/skills](https://github.com/mattpocock/skills) and [tech-leads-club/agent-skills](https://github.com/tech-leads-club/agent-skills).
+Current sources: [mattpocock/skills](https://github.com/mattpocock/skills) and [tech-leads-club/agent-skills](https://github.com/tech-leads-club/agent-skills). The whole tech-leads-club catalog is listed, so `/help-me` can point to a skill for a task even before it is installed.
 
 ## Add a skill
 

@@ -1,0 +1,7 @@
+# Adicionar todas as skills do TLC ao registry
+
+**Por quê:** ter o catálogo inteiro do tech-leads-club/agent-skills no registry, para que o `/help-me` indique a skill certa para uma tarefa (ex.: um problema de SEO apontado por um audit) mesmo quando eu ainda não a conheço ou não a instalei.
+**O quê:** as 87 skills do TLC que faltavam entraram no manifest (92 do TLC, 96 no total), cada uma com categoria e `when_to_use`. O workflow `tlc` passou a incluir `tlc-discover` e `tlc-plan`. O picker do `setup-fassi-skills` pergunta antes quais categorias abrir, e o `help-me` trata achados de audit e explica o que a skill faz e do que precisa.
+**Como:** entradas geradas por script a partir do `skills-registry.json` do TLC (commit 120b676), com `when_to_use` escrito à mão; categorias seguem as do TLC. Arquivos: `skills/setup-fassi-skills/manifest.json`, `skills/setup-fassi-skills/SKILL.md`, `skills/help-me/SKILL.md`, `README.md`.
+**Verificação:** asserts no script: o conjunto de skills `tech-leads-club` do manifest é igual ao do registry upstream, sem duplicatas, JSON válido, workflows só citam skills existentes. Instalação real de `accessibility`, `technical-design-doc-creator` e `best-practices` num projeto de teste confirmou que o nome do registry é o aceito pelo `-s` e o nome da pasta instalada. O picker e o `help-me` alterados não foram executados.
+**Pendências:** sem sincronização automática: skills novas do TLC precisam ser adicionadas à mão. Nada foi commitado.

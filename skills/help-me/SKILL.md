@@ -29,6 +29,7 @@ Settle these from the task and the project. Ask the user only for what you could
 | Does it span several modules or sessions? | A spec cut into tickets, one ticket per session. |
 | Does it change a module's shape or interface? | Design the interface first, then move callers in small steps. |
 | Is it hard to undo (migration, cutover, public API)? | Smallest reversible slice first, with a way back written down. |
+| Is it a finding from an audit or report (SEO, accessibility, performance, security)? | The registry skill for that area, pointed at the finding alone. |
 | Is it small, clear and local? | No process: just do it, then review the diff. |
 
 When a registry workflow fits, recommend that workflow whole and respect `workflow_rule`.
@@ -37,7 +38,7 @@ When a registry workflow fits, recommend that workflow whole and respect `workfl
 
 Keep it to what the user can act on:
 
-1. **The path**: numbered steps in the order to do them. Each step names a skill (as the command to type) or a pattern, with one line on why it fits *this* task.
+1. **The path**: numbered steps in the order to do them. Each step names a skill (as the command to type) or a pattern, with one line on why it fits *this* task. For a registry skill, add what it does when run and what it needs (an MCP, a CLI, a token), since the user may never have used it.
 2. **Not installed**: mark any recommended skill that is not available in this session, and point to `/setup-fassi-skills` to install it.
 3. **The alternative**: one other path and the condition under which it would be the better choice.
 4. **What to skip**: process that would be overkill for this task, in one line.
