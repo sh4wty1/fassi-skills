@@ -47,7 +47,7 @@ The target **agents** default to the agent running this skill. Mention that defa
 
 For each chosen skill, in manifest order, one at a time: take its source's `install` command (for a suggestion from an unlisted repo, `any_repo_install` with `{repo}` as `owner/name`), replace `{skill}` with the skill name and `{agents}` with the space-separated agent ids, and run it from the project root. A skill marked `(installed)` is reinstalled only when the user picked it.
 
-Agent ids are the installer's own, and the installers disagree on a few (`gemini-cli` / `gemini`, `kilo` / `kilocode`, `kiro-cli` / `kiro`). When an installer rejects an id, read the supported list in that source's `repo` and retry with its spelling.
+Agent ids are the installer's own, and the installers disagree on a few (`gemini-cli` / `gemini`, `kilo` / `kilocode`, `kiro-cli` / `kiro`; the `impeccable` source wants `claude` / `cursor`, not `claude-code`, and takes them comma-separated in `--providers`). When an installer rejects an id, read the supported list in that source's `repo` and retry with its spelling.
 
 A skill counts as installed when a `skills/<name>/SKILL.md` exists under an agent directory of the project afterwards (`.claude/skills/`, `.agents/skills/`, `.cursor/skills/`, ...). Judge by that file, since an installer can exit 0 having installed nothing. Keep going after a failure.
 

@@ -61,7 +61,7 @@ Everything lives in one file: [`skills/setup-fassi-skills/manifest.json`](skills
 | `workflows` | Skills that form a flow, in order, and when to pick that flow |
 | `tools` | CLIs that are run, not installed |
 
-Current sources: [mattpocock/skills](https://github.com/mattpocock/skills) and [tech-leads-club/agent-skills](https://github.com/tech-leads-club/agent-skills). The whole tech-leads-club catalog is listed, so `/help-me` can point to a skill for a task even before it is installed.
+Current sources: [mattpocock/skills](https://github.com/mattpocock/skills), [tech-leads-club/agent-skills](https://github.com/tech-leads-club/agent-skills), [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill), [emilkowalski/skills](https://github.com/emilkowalski/skills), [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) and [pbakaus/impeccable](https://github.com/pbakaus/impeccable). The whole tech-leads-club catalog is listed, so `/help-me` can point to a skill for a task even before it is installed.
 
 ## Add a skill
 

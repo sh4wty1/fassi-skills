@@ -9,6 +9,26 @@
       "repo": "https://github.com/tech-leads-club/agent-skills",
       "license": "MIT (CLI), CC-BY-4.0 (skill content)",
       "install": "npx --yes @tech-leads-club/agent-skills install -s {skill} -a {agents}"
+    },
+    "Leonxlnx": {
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "license": "MIT",
+      "install": "npx --yes skills@latest add Leonxlnx/taste-skill --skill {skill} -a {agents} -y"
+    },
+    "emilkowalski": {
+      "repo": "https://github.com/emilkowalski/skills",
+      "license": "MIT",
+      "install": "npx --yes skills@latest add emilkowalski/skills --skill {skill} -a {agents} -y"
+    },
+    "ponytail": {
+      "repo": "https://github.com/DietrichGebert/ponytail",
+      "license": "MIT",
+      "install": "npx --yes skills@latest add DietrichGebert/ponytail --skill {skill} -a {agents} -y"
+    },
+    "impeccable": {
+      "repo": "https://github.com/pbakaus/impeccable",
+      "license": "Apache-2.0",
+      "install": "npx --yes impeccable install --providers={agents}"
     }
   },
   "any_repo_install": "npx --yes skills@latest add {repo} --skill {skill} -a {agents} -y",
@@ -588,18 +608,227 @@
       "source": "tech-leads-club",
       "category": "gtm",
       "when_to_use": "Define GTM metrics and dashboards: pipeline, CAC, LTV, time-to-first-value."
+    },
+    {
+      "name": "design-taste-frontend",
+      "source": "Leonxlnx",
+      "category": "design",
+      "when_to_use": "Anti-slop frontend for landing pages, portfolios and redesigns: reads the brief, infers a direction and ships UI that does not look templated."
+    },
+    {
+      "name": "redesign-existing-projects",
+      "source": "Leonxlnx",
+      "category": "design",
+      "when_to_use": "Upgrade an existing site or app to premium quality without breaking it; audits the current design first."
+    },
+    {
+      "name": "high-end-visual-design",
+      "source": "Leonxlnx",
+      "category": "design",
+      "when_to_use": "Make a site feel expensive: the exact fonts, spacing, shadows and motion a high-end agency would use, blocking the cheap AI defaults."
+    },
+    {
+      "name": "industrial-brutalist-ui",
+      "source": "Leonxlnx",
+      "category": "design",
+      "when_to_use": "A raw brutalist look: rigid grids, extreme type contrast, a declassified-blueprint feel, for data-heavy dashboards or editorial sites."
+    },
+    {
+      "name": "minimalist-ui",
+      "source": "Leonxlnx",
+      "category": "design",
+      "when_to_use": "A clean editorial minimalist look: warm monochrome, typographic contrast, flat bento grids, no gradients or heavy shadows."
+    },
+    {
+      "name": "stitch-design-taste",
+      "source": "Leonxlnx",
+      "category": "design",
+      "when_to_use": "Generate a DESIGN.md with premium, anti-generic UI standards for Google Stitch."
+    },
+    {
+      "name": "gpt-taste",
+      "source": "Leonxlnx",
+      "category": "design",
+      "when_to_use": "GSAP-heavy editorial motion and strict AIDA page structure with randomized layout variance."
+    },
+    {
+      "name": "full-output-enforcement",
+      "source": "Leonxlnx",
+      "category": "development",
+      "when_to_use": "Force complete, unabridged code output: ban placeholders and handle token-limit splits cleanly."
+    },
+    {
+      "name": "brandkit",
+      "source": "Leonxlnx",
+      "category": "design",
+      "when_to_use": "Generate brand-guideline boards, logo systems and identity decks as images. Needs an image-generation model."
+    },
+    {
+      "name": "imagegen-frontend-web",
+      "source": "Leonxlnx",
+      "category": "design",
+      "when_to_use": "Generate premium website design reference images, one per section. Needs an image-generation model."
+    },
+    {
+      "name": "imagegen-frontend-mobile",
+      "source": "Leonxlnx",
+      "category": "design",
+      "when_to_use": "Generate premium mobile app screen concepts and flows as images. Needs an image-generation model."
+    },
+    {
+      "name": "image-to-code",
+      "source": "Leonxlnx",
+      "category": "design",
+      "when_to_use": "Generate a design image first, analyse it, then build the site to match it. Needs an image-generation model."
+    },
+    {
+      "name": "emil-design-eng",
+      "source": "emilkowalski",
+      "category": "design",
+      "when_to_use": "Emil Kowalski's philosophy on UI polish, component design and animation decisions; the main design-engineering skill."
+    },
+    {
+      "name": "animate",
+      "source": "emilkowalski",
+      "category": "design",
+      "when_to_use": "Build a web animation from scratch, deciding curve, duration, properties and exit in the order that makes it feel right. Writes the code."
+    },
+    {
+      "name": "animate-expo",
+      "source": "emilkowalski",
+      "category": "development",
+      "when_to_use": "Build animations in React Native and Expo with Reanimated, Gesture Handler and haptics: gestures, sheets, screen transitions."
+    },
+    {
+      "name": "apple-design",
+      "source": "emilkowalski",
+      "category": "design",
+      "when_to_use": "Apple's interface and fluid-motion principles translated for the web: springs, gestures, materials, depth, typography."
+    },
+    {
+      "name": "review-animations",
+      "source": "emilkowalski",
+      "category": "design",
+      "when_to_use": "Review existing animation code against a strict craft bar; approval is earned. Runs only when invoked."
+    },
+    {
+      "name": "improve-animations",
+      "source": "emilkowalski",
+      "category": "design",
+      "when_to_use": "Audit all the motion in a codebase and get prioritized, self-contained plans for another agent to execute. Read-only."
+    },
+    {
+      "name": "find-animation-opportunities",
+      "source": "emilkowalski",
+      "category": "design",
+      "when_to_use": "Find places in a UI that should animate but don't, and reject the ones that shouldn't. Read-only, proposes values."
+    },
+    {
+      "name": "animation-vocabulary",
+      "source": "emilkowalski",
+      "category": "design",
+      "when_to_use": "Turn a vague description of a motion effect into its exact name, to prompt an AI or designer precisely."
+    },
+    {
+      "name": "mobile-native",
+      "source": "emilkowalski",
+      "category": "design",
+      "when_to_use": "Make a web app feel native on a phone: tap highlights, the 100vh bug, input zoom, safe areas, pull-to-refresh."
+    },
+    {
+      "name": "break-ui",
+      "source": "emilkowalski",
+      "category": "quality",
+      "when_to_use": "Stress-test a component with worst-case data (long names, emoji, empty lists) and report what broke, with a fix for each."
+    },
+    {
+      "name": "pick-ui-library",
+      "source": "emilkowalski",
+      "category": "design",
+      "when_to_use": "Pick the right frontend library for a task from a curated, trusted list. Runs only when invoked."
+    },
+    {
+      "name": "prototype",
+      "source": "emilkowalski",
+      "category": "design",
+      "when_to_use": "Build several genuinely different versions of a UI piece behind a picker to flip through live. Runs only when invoked."
+    },
+    {
+      "name": "write-swift",
+      "source": "emilkowalski",
+      "category": "development",
+      "when_to_use": "Write modern Swift well: value types, Swift 6 concurrency, generics, performance, Swift Testing."
+    },
+    {
+      "name": "ask-sonner",
+      "source": "emilkowalski",
+      "category": "development",
+      "when_to_use": "Work with the Sonner React toast library: setup, recipes and fixes for toasts that don't show, double up or lose styles."
+    },
+    {
+      "name": "ponytail",
+      "source": "ponytail",
+      "category": "quality",
+      "when_to_use": "Force the laziest working solution: YAGNI, stdlib before dependencies, one line before fifty. Already active here as a plugin."
+    },
+    {
+      "name": "ponytail-review",
+      "source": "ponytail",
+      "category": "quality",
+      "when_to_use": "Review a diff only for over-engineering: what to delete and what replaces it, one line per finding."
+    },
+    {
+      "name": "ponytail-audit",
+      "source": "ponytail",
+      "category": "quality",
+      "when_to_use": "Scan the whole repo for over-engineering: a ranked list of what to cut, simplify or replace with stdlib."
+    },
+    {
+      "name": "ponytail-debt",
+      "source": "ponytail",
+      "category": "quality",
+      "when_to_use": "Collect every `ponytail:` comment into a ledger of deferred shortcuts, so later does not mean never."
+    },
+    {
+      "name": "ponytail-gain",
+      "source": "ponytail",
+      "category": "quality",
+      "when_to_use": "Show ponytail's measured impact (less code, cost, time) as a scoreboard."
+    },
+    {
+      "name": "ponytail-help",
+      "source": "ponytail",
+      "category": "quality",
+      "when_to_use": "Quick-reference card for ponytail modes, skills and commands."
+    },
+    {
+      "name": "impeccable",
+      "source": "impeccable",
+      "category": "design",
+      "when_to_use": "Design, redesign, critique or polish a frontend interface: UX review, visual hierarchy, information architecture, accessibility, performance. Bespoke installer (npx impeccable install) with an optional edit-time hook."
     }
   ],
   "workflows": [
     {
       "name": "matt-pocock",
       "when_to_use": "Start from a conversation: grill the idea, write the spec, cut tickets, build one ticket per session.",
-      "skills": ["grill-with-docs", "to-spec", "to-tickets", "implement"]
+      "skills": [
+        "grill-with-docs",
+        "to-spec",
+        "to-tickets",
+        "implement"
+      ]
     },
     {
       "name": "tlc",
       "when_to_use": "Spec-driven features with an independent verifier. Pick tlc-spec-driven when the work needs a task breakdown to stay ordered, tlc-spec-lean otherwise. For work too big for one spec, go step by step: tlc-discover shapes the idea, tlc-plan cuts it into tasks, tlc-implement builds each one.",
-      "skills": ["tlc-discover", "tlc-plan", "tlc-spec-driven", "tlc-spec-lean", "tlc-implement"]
+      "skills": [
+        "tlc-discover",
+        "tlc-plan",
+        "tlc-spec-driven",
+        "tlc-spec-lean",
+        "tlc-implement"
+      ]
     }
   ],
   "workflow_rule": "One feature stays in one workflow from spec to verification. Quality skills pair with either workflow.",
